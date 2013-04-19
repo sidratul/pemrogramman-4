@@ -14,6 +14,32 @@
   <bean id="pd" class="com.p4.spring.ProdukDao">    
     <property name="password" value=""> </property>
   </bean>
+  
+  <bean id="p" class="com.p4.spring.Produk">    
+    <property name="kode" value="ab002"> </property>
+    <property name="nama" value="10000"> </property>
+    <property name="harga" ref="jp"> </property>
+    <property name="lastUpdate" value="2013-04-12"> </property>
+  </bean>
   <!-- more bean definitions go here -->
-
+  <bean id="dateEditor"
+	   class="org.springframework.beans.propertyeditors.CustomDateEditor">
+ 
+		<constructor-arg>
+			<bean class="java.text.SimpleDateFormat">
+				<constructor-arg value="yyyy-MM-dd" />
+			</bean>
+		</constructor-arg>
+		<constructor-arg value="true" />
+	</bean>
+	
+	<bean class="org.springframework.beans.factory.config.CustomEditorConfigurer">
+		<property name="customEditors">
+			<map>
+				<entry key="java.util.Date">
+					<ref local="dateEditor" />
+				</entry>
+			</map>
+		</property>
+	</bean>
 </beans>
