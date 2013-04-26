@@ -12,13 +12,12 @@
   </bean>
   
   <bean id="pd" class="com.p4.spring.ProdukDao">    
-    <property name="password" value=""> </property>
   </bean>
   
   <bean id="p" class="com.p4.spring.Produk">    
     <property name="kode" value="ab002"> </property>
-    <property name="nama" value="10000"> </property>
-    <property name="harga" ref="jp"> </property>
+    <property name="nama" value="teh botol"> </property>
+    <property name="harga" ref="10000"> </property>
     <property name="lastUpdate" value="2013-04-12"> </property>
   </bean>
   <!-- more bean definitions go here -->
