@@ -21,6 +21,7 @@ public class WebServlet extends HttpServlet{
             
             res.setContentType("text/html");
             res.getWriter().print(output);
+            
         }catch(IOException ie){
             Logger.getLogger(WebServlet.class.getName()).log(Level.SEVERE,null,ie);
         }

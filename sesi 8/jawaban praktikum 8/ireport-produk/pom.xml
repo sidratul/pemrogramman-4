@@ -1,0 +1,124 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+  <modelVersion>4.0.0</modelVersion>
+  <groupId>com.p4.springmvc</groupId>
+  <artifactId>ireport-produk</artifactId>
+  <packaging>war</packaging>
+  <version>1.0-SNAPSHOT</version>
+  <name>ireport-produk</name>
+  <url>http://maven.apache.org</url>
+  <dependencies>
+    <dependency>
+      <groupId>junit</groupId>
+      <artifactId>junit</artifactId>
+      <version>3.8.1</version>
+      <scope>test</scope>
+    </dependency>
+    <dependency>
+      <groupId>javax.servlet</groupId>
+      <artifactId>javax.servlet-api</artifactId>
+      <version>3.0.1</version>
+      <scope>provided</scope>      
+    </dependency>
+    <dependency>
+      <groupId>javax.servlet</groupId>
+      <artifactId>jstl</artifactId>
+      <version>1.2</version>
+    </dependency>
+    <dependency>
+      <groupId>org.springframework</groupId>
+      <artifactId>spring-webmvc</artifactId>
+      <version>3.2.2.RELEASE</version>
+    </dependency>
+    
+    <dependency>
+      <groupId>mysql</groupId>
+      <artifactId>mysql-connector-java</artifactId>
+      <version>5.1.23</version>
+    </dependency>    
+    <dependency>
+      <groupId>commons-dbcp</groupId>
+      <artifactId>commons-dbcp</artifactId>
+      <version>1.4</version>
+    </dependency>
+    <dependency>
+      <groupId>org.springframework</groupId>
+      <artifactId>spring-jdbc</artifactId>
+      <version>3.2.1.RELEASE</version>
+    </dependency>
+    <dependency>
+      <groupId>org.springframework</groupId>
+      <artifactId>spring-context</artifactId>
+      <version>3.2.2.RELEASE</version>
+    </dependency>
+    
+    <dependency>
+        <groupId>org.hibernate</groupId>
+        <artifactId>hibernate-validator</artifactId>
+        <version>4.3.1.Final</version>
+    </dependency>
+    
+<!--    untuk xls-->
+    <dependency>
+        <groupId>org.apache.poi</groupId>
+        <artifactId>poi</artifactId>
+        <version>3.9</version>
+        <type>jar</type>
+        <scope>compile</scope>
+    </dependency>
+<!-- Jasper -->
+    <dependency>
+        <groupId>net.sf.jasperreports</groupId>
+        <artifactId>jasperreports</artifactId>
+        <version>5.1.0</version>
+    <type>jar</type>
+    <scope>compile</scope>
+    <exclusions>
+        <exclusion>
+                <artifactId>commons-collections</artifactId>
+                <groupId>commons-collections</groupId>
+        </exclusion>
+        <exclusion>
+                <artifactId>commons-beanutils</artifactId>
+                <groupId>commons-beanutils</groupId>
+        </exclusion>
+        <exclusion>
+                <artifactId>commons-digester</artifactId>
+                <groupId>commons-digester</groupId>
+        </exclusion>
+        <exclusion>
+                <artifactId>commons-logging</artifactId>
+                <groupId>commons-logging</groupId>
+        </exclusion>
+    </exclusions>
+    </dependency>
+
+<!-- Dependency required by Jasper -->
+    <dependency>
+    	<groupId>commons-digester</groupId>
+    	<artifactId>commons-digester</artifactId>
+    	<version>2.1</version>
+    	<type>jar</type>
+    	<scope>compile</scope>
+    </dependency>
+    
+    <!-- Dependency required by Jasper -->
+    <dependency>
+    	<groupId>commons-collections</groupId>
+    	<artifactId>commons-collections</artifactId>
+    	<version>3.2.1</version>
+    	<type>jar</type>
+    	<scope>compile</scope>
+    </dependency>
+    
+    <dependency>
+        <groupId>org.springframework</groupId>
+        <artifactId>spring-context-support</artifactId>
+        <version>3.2.3.RELEASE</version>
+    </dependency>
+    
+  </dependencies>  
+  <build>
+    <finalName>springmvc</finalName>
+  </build>
+</project>
