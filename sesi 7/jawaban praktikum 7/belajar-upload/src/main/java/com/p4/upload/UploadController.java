@@ -20,7 +20,8 @@ public class UploadController {
     
     @RequestMapping(value="upload/upload-gambar", method= RequestMethod.POST)
     public String prosesForm(@RequestParam("photofile") MultipartFile fileUpload )throws Exception{
-        String namaFile = fileUpload.getOriginalFilename();        
+        String namaFile = fileUpload.getOriginalFilename();
+        
         File file = new File("src/main/webapp/upload-folder/"+namaFile);
         fileUpload.transferTo(file);
         return "redirect:/aplikasi/upload/uploaded-file";
